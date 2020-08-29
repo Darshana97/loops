@@ -10,7 +10,7 @@ namespace loops
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your target?");
+            /*Console.WriteLine("Enter your target?");
             int Target = int.Parse(Console.ReadLine());
 
             Console.WriteLine("______________________________________________");
@@ -22,7 +22,65 @@ namespace loops
                 Console.WriteLine(Start);
                 Start += 2;
             }
+            Console.ReadLine();*/
+
+
+            int CoffeeCups = 0;
+
+            Start:
+            Console.WriteLine("Enter your choice : 1 - Small, 2 - Medium, 3 - Large ");
+            int YourChoice = int.Parse(Console.ReadLine());
+            
+
+            do
+            {
+                switch (YourChoice)
+                {
+                    case 1:
+                        CoffeeCups += 1;
+                        break;
+                    case 2:
+                        CoffeeCups += 2;
+                        break;
+                    case 3:
+                        CoffeeCups += 3;
+                        break;
+                        
+                    
+
+                }
+
+                Console.WriteLine("Do you want another coffee : Yes or No?");
+                string YourDecision =  Console.ReadLine();
+
+                Decision:
+                switch (YourDecision.ToUpper())
+                {
+                    case "YES":
+                        goto Start;
+                    case "NO":
+                        goto Final;
+                    default:
+                        Console.WriteLine("Invalid decision");
+                        break;
+
+                }
+
+
+
+            } while (YourChoice == 1 || YourChoice == 2 || YourChoice == 3 );
+
+            Console.WriteLine("Invalid choice");
+            goto Start;
+            
+
+        Final:
+            Console.WriteLine("Thank you , Come again");
+            Console.WriteLine("Bil amount {0}", CoffeeCups);
             Console.ReadLine();
+
+
+
         }
     }
 }
