@@ -25,7 +25,7 @@ namespace loops
             Console.ReadLine();*/
 
 
-            int CoffeeCups = 0;
+            /*int CoffeeCups = 0;
 
             Start:
             Console.WriteLine("Enter your choice : 1 - Small, 2 - Medium, 3 - Large ");
@@ -77,6 +77,25 @@ namespace loops
         Final:
             Console.WriteLine("Thank you , Come again");
             Console.WriteLine("Bil amount {0}", CoffeeCups);
+            Console.ReadLine();*/
+
+
+            int[] Numbers = new int[3];
+            Numbers[0] = 100;
+            Numbers[1] = 200;
+            Numbers[2] = 300;
+
+            /*for (int i = 0; i < Numbers.Length; i++)
+            {
+                Console.WriteLine(Numbers[i]);
+                
+            }*/
+
+            foreach (int x in Numbers)
+            {
+                Console.WriteLine(x);
+            }
+
             Console.ReadLine();
 
 
